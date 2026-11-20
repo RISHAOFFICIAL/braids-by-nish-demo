@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Braids by Nish | Detroit Braider | Stitch Braids, Knotless, Cornrows</title>
-<meta name="description" content="Braids by Nish. Detroit braider specializing in stitch braids, knotless box braids, cornrows, and feed-in styles. Book on Instagram @braidsby_nish.">
+<meta name="description" content="Braids by Nish. Detroit braider specializing in stitch braids, knotless box braids, cornrows, and feed-in styles. Book online.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
@@ -58,6 +58,11 @@
   .logo{
     font-family:'Anton',sans-serif;
     font-size:22px;letter-spacing:1px;text-transform:uppercase;
+    display:flex;align-items:center;gap:12px;
+  }
+  .logo img{
+    height:40px;width:40px;object-fit:cover;border-radius:10px;
+    border:1px solid rgba(255,255,255,.15);
   }
   .logo span{color:var(--orange)}
   .nav-links{display:flex;gap:34px;align-items:center}
@@ -85,7 +90,7 @@
     position:absolute;
     top:0;right:0;
     width:46%;height:100%;
-    background:linear-gradient(160deg,#FF5C00 0%,#FF8A00 45%,#C73E00 100%);
+    background:url('images/nish-braids-1.jpg') center 20%/cover no-repeat;
     clip-path:polygon(18% 0,100% 0,100% 100%,0 100%);
     z-index:0;
   }
@@ -93,8 +98,8 @@
     content:"";
     position:absolute;inset:0;
     background:
-      radial-gradient(circle at 80% 20%,rgba(255,255,255,.28),transparent 45%),
-      radial-gradient(circle at 30% 85%,rgba(0,0,0,.25),transparent 50%);
+      linear-gradient(160deg,rgba(255,92,0,.30),rgba(199,62,0,.18) 55%,rgba(10,10,10,.55)),
+      radial-gradient(circle at 80% 20%,rgba(255,255,255,.18),transparent 45%);
   }
   .hero-rotated{
     position:absolute;
@@ -342,14 +347,37 @@
   }
   .tile.tall{grid-row:span 2}
   .tile.wide{grid-column:span 2}
-  .g1{background:linear-gradient(150deg,#FF5C00,#8A2BE2)}
-  .g2{background:linear-gradient(150deg,#1E3A8A,#FF5C00)}
-  .g3{background:linear-gradient(150deg,#0F766E,#F59E0B)}
-  .g4{background:linear-gradient(150deg,#7C2D12,#FF8A00)}
-  .g5{background:linear-gradient(150deg,#4C1D95,#EC4899)}
-  .g6{background:linear-gradient(150deg,#111827,#FF5C00)}
-  .g7{background:linear-gradient(150deg,#B45309,#111827)}
-  .g8{background:linear-gradient(150deg,#831843,#F97316)}
+  .tile img{
+    position:absolute;inset:0;
+    width:100%;height:100%;object-fit:cover;
+  }
+  .tile span{z-index:2}
+
+  /* ---------- shop ---------- */
+  .shop{border-top:1px solid rgba(255,255,255,.1)}
+  .shop-grid{
+    display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:start;
+  }
+  .shop-photo img{
+    width:100%;border-radius:18px;display:block;
+    border:1px solid rgba(255,255,255,.08);
+  }
+  .shop-photo figcaption{
+    margin-top:12px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);
+  }
+  .shop-item{
+    display:flex;justify-content:space-between;gap:24px;align-items:center;
+    padding:26px 0;border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .shop-item:first-child{padding-top:6px}
+  .shop-item h3{
+    font-family:'Anton',sans-serif;font-size:26px;text-transform:uppercase;line-height:1.1;
+  }
+  .shop-item p{
+    color:var(--muted);font-size:15px;line-height:1.6;margin-top:8px;max-width:480px;
+  }
+  .shop-buy{display:flex;flex-direction:column;align-items:flex-end;gap:12px;flex-shrink:0}
+  .shop-price{font-family:'Anton',sans-serif;font-size:32px;color:var(--orange)}
 
   /* ---------- about ---------- */
   .about{
@@ -440,6 +468,7 @@
     .hero-rotated{display:none}
     .masonry{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
     .about{grid-template-columns:1fr;gap:30px}
+    .shop-grid{grid-template-columns:1fr;gap:28px}
     .about-big{position:static}
     .nav-links a:not(.nav-book){display:none}
   }
@@ -458,12 +487,13 @@
 <body>
 
 <nav>
-  <a href="#" class="logo">Braids <span>by Nish</span></a>
+  <a href="#" class="logo"><img src="images/nish-logo.jpg" alt="Braids by Nish logo">Braids <span>by Nish</span></a>
   <div class="nav-links">
     <a href="#services">Services</a>
     <a href="#work">Work</a>
     <a href="#about">About</a>
-    <a class="nav-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book Now</a>
+    <a href="#shop">Shop</a>
+    <a class="nav-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book Now</a>
   </div>
 </nav>
 
@@ -480,13 +510,13 @@
     <div class="hero-bottom">
       <p class="hero-tag">Clean parts. Crisp stitch. Braids that turn heads. <strong>Stitch braids, knotless, cornrows, and feed-in styles</strong> done right, every single time.</p>
       <div class="hero-cta">
-        <a class="btn btn-orange" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book on Instagram</a>
+        <a class="btn btn-orange" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book Appointment</a>
         <a class="btn btn-ghost" href="#services">See Services</a>
       </div>
     </div>
     <div class="hero-meta">
       <div><b>71K</b>Instagram Followers</div>
-      <div><b>12</b>Signature Styles</div>
+      <div><b>17</b>Signature Styles</div>
       <div><b>Detroit</b>Based in the D</div>
     </div>
   </div>
@@ -494,15 +524,15 @@
 
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Stitch Braids</span><span>&#9733;</span><span>Knotless</span><span>&#9733;</span><span>Cornrows</span><span>&#9733;</span><span>Feed-In Ponytail</span><span>&#9733;</span><span>Boho Buns</span><span>&#9733;</span><span>Zigzag Stitch</span><span>&#9733;</span>
-    <span>Stitch Braids</span><span>&#9733;</span><span>Knotless</span><span>&#9733;</span><span>Cornrows</span><span>&#9733;</span><span>Feed-In Ponytail</span><span>&#9733;</span><span>Boho Buns</span><span>&#9733;</span><span>Zigzag Stitch</span><span>&#9733;</span>
+    <span>Stitch Braids</span><span>&#9733;</span><span>Knotless</span><span>&#9733;</span><span>Feed-Ins</span><span>&#9733;</span><span>Feed-In Ponytail</span><span>&#9733;</span><span>Boho Buns</span><span>&#9733;</span><span>Zigzag Stitch</span><span>&#9733;</span>
+    <span>Stitch Braids</span><span>&#9733;</span><span>Knotless</span><span>&#9733;</span><span>Feed-Ins</span><span>&#9733;</span><span>Feed-In Ponytail</span><span>&#9733;</span><span>Boho Buns</span><span>&#9733;</span><span>Zigzag Stitch</span><span>&#9733;</span>
   </div>
 </div>
 
 <section id="services">
   <div class="section-head">
     <h2>The <em>Menu</em></h2>
-    <p>Scroll each row to browse every style. Tap Book to lock in your appointment on Instagram.</p>
+    <p>Scroll each row to browse every style. Tap Book to lock in your appointment online.</p>
   </div>
 
   <div class="cat-row">
@@ -513,29 +543,29 @@
     </div>
     <div class="scroll-row">
       <article class="svc-card">
+        <p class="svc-time">1.5 hrs</p>
+        <h4 class="svc-name">5 Stitch Braids w/ Bun</h4>
+        <div class="svc-bottom"><span class="svc-price">$145</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
+      </article>
+      <article class="svc-card">
+        <p class="svc-time">2 hrs</p>
+        <h4 class="svc-name">6 Stitch Braids w/ Design</h4>
+        <div class="svc-bottom"><span class="svc-price">$180</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
+      </article>
+      <article class="svc-card">
+        <p class="svc-time">1.5 hrs</p>
+        <h4 class="svc-name">4 Stitch Braids w/ Freestyle</h4>
+        <div class="svc-bottom"><span class="svc-price">$155</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
+      </article>
+      <article class="svc-card">
+        <p class="svc-time">1.5 hrs</p>
+        <h4 class="svc-name">5 Stitch w/ Wavy Parts</h4>
+        <div class="svc-bottom"><span class="svc-price">$140</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
+      </article>
+      <article class="svc-card">
         <p class="svc-time">2.5 hrs</p>
-        <h4 class="svc-name">6 Stitch Braids</h4>
-        <div class="svc-bottom"><span class="svc-price">$105</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
-      </article>
-      <article class="svc-card">
-        <p class="svc-time">3 hrs</p>
-        <h4 class="svc-name">8 Stitch Braids</h4>
-        <div class="svc-bottom"><span class="svc-price">$130</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
-      </article>
-      <article class="svc-card">
-        <p class="svc-time">3.5 hrs</p>
-        <h4 class="svc-name">10 Stitch Braids</h4>
-        <div class="svc-bottom"><span class="svc-price">$155</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
-      </article>
-      <article class="svc-card">
-        <p class="svc-time">5 hrs</p>
-        <h4 class="svc-name">Stitch X Knotless + Barrel Ends</h4>
-        <div class="svc-bottom"><span class="svc-price">$220</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
-      </article>
-      <article class="svc-card">
-        <p class="svc-time">3 hrs</p>
-        <h4 class="svc-name">Zigzag Stitch Braids</h4>
-        <div class="svc-bottom"><span class="svc-price">$140</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
+        <h4 class="svc-name">8 Stitch w/ Design</h4>
+        <div class="svc-bottom"><span class="svc-price">$205</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
       </article>
     </div>
   </div>
@@ -543,24 +573,34 @@
   <div class="cat-row">
     <div class="cat-head">
       <span class="cat-num">02</span>
-      <h3 class="cat-name">Knotless</h3>
-      <span class="cat-count">3 styles</span>
+      <h3 class="cat-name">Feed-Ins</h3>
+      <span class="cat-count">5 styles</span>
     </div>
     <div class="scroll-row">
       <article class="svc-card">
-        <p class="svc-time">5 hrs</p>
-        <h4 class="svc-name">Medium Knotless Box Braids</h4>
-        <div class="svc-bottom"><span class="svc-price">$180</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
+        <p class="svc-time">2 hrs</p>
+        <h4 class="svc-name">6 Feed Ins</h4>
+        <div class="svc-bottom"><span class="svc-price">$165</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
       </article>
       <article class="svc-card">
-        <p class="svc-time">4 hrs</p>
-        <h4 class="svc-name">Large Knotless Box Braids</h4>
-        <div class="svc-bottom"><span class="svc-price">$150</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
+        <p class="svc-time">1.5 hrs</p>
+        <h4 class="svc-name">5 Feedins</h4>
+        <div class="svc-bottom"><span class="svc-price">$155</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
       </article>
       <article class="svc-card">
-        <p class="svc-time">7 hrs</p>
-        <h4 class="svc-name">Small Knotless Box Braids</h4>
-        <div class="svc-bottom"><span class="svc-price">$280</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
+        <p class="svc-time">1 hr</p>
+        <h4 class="svc-name">2 Feed Ins</h4>
+        <div class="svc-bottom"><span class="svc-price">$90</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
+      </article>
+      <article class="svc-card">
+        <p class="svc-time">1.5 hrs</p>
+        <h4 class="svc-name">5 Zig Zag Feed Ins</h4>
+        <div class="svc-bottom"><span class="svc-price">$155</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
+      </article>
+      <article class="svc-card">
+        <p class="svc-time">1.5 hrs</p>
+        <h4 class="svc-name">4 Nipsey Feed Ins</h4>
+        <div class="svc-bottom"><span class="svc-price">$130</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
       </article>
     </div>
   </div>
@@ -568,19 +608,24 @@
   <div class="cat-row">
     <div class="cat-head">
       <span class="cat-num">03</span>
-      <h3 class="cat-name">Cornrows</h3>
-      <span class="cat-count">2 styles</span>
+      <h3 class="cat-name">Knotless &amp; Fulani</h3>
+      <span class="cat-count">3 styles</span>
     </div>
     <div class="scroll-row">
       <article class="svc-card">
-        <p class="svc-time">2 hrs</p>
-        <h4 class="svc-name">Cornrows (Straight Back)</h4>
-        <div class="svc-bottom"><span class="svc-price">$75</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
+        <p class="svc-time">3 hrs</p>
+        <h4 class="svc-name">Stitch x Knotless w/ Barrel End</h4>
+        <div class="svc-bottom"><span class="svc-price">$240</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
+      </article>
+      <article class="svc-card">
+        <p class="svc-time">4 hrs</p>
+        <h4 class="svc-name">Freestyle Fulani w/ Large Knotless</h4>
+        <div class="svc-bottom"><span class="svc-price">$290</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
       </article>
       <article class="svc-card">
         <p class="svc-time">3 hrs</p>
-        <h4 class="svc-name">Cornrows with Design</h4>
-        <div class="svc-bottom"><span class="svc-price">$110</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
+        <h4 class="svc-name">Snake Braids w/ Large Knotless</h4>
+        <div class="svc-bottom"><span class="svc-price">$255</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
       </article>
     </div>
   </div>
@@ -589,23 +634,33 @@
     <div class="cat-head">
       <span class="cat-num">04</span>
       <h3 class="cat-name">Buns &amp; Ponytails</h3>
-      <span class="cat-count">2 styles</span>
+      <span class="cat-count">4 styles</span>
     </div>
     <div class="scroll-row">
       <article class="svc-card">
-        <p class="svc-time">5 hrs</p>
-        <h4 class="svc-name">Boho Knotless Buns</h4>
-        <div class="svc-bottom"><span class="svc-price">$200</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
+        <p class="svc-time">2.5 hrs</p>
+        <h4 class="svc-name">Feed In Ponytail</h4>
+        <div class="svc-bottom"><span class="svc-price">$195</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
+      </article>
+      <article class="svc-card">
+        <p class="svc-time">2 hrs</p>
+        <h4 class="svc-name">Feed in Bun</h4>
+        <div class="svc-bottom"><span class="svc-price">$175</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
+      </article>
+      <article class="svc-card">
+        <p class="svc-time">1.5 hrs</p>
+        <h4 class="svc-name">2 Stitch Braids w/ Pony</h4>
+        <div class="svc-bottom"><span class="svc-price">$95</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
       </article>
       <article class="svc-card">
         <p class="svc-time">3 hrs</p>
-        <h4 class="svc-name">Feed-In Ponytail</h4>
-        <div class="svc-bottom"><span class="svc-price">$120</span><a class="svc-book" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book</a></div>
+        <h4 class="svc-name">Extended Feed In Pony</h4>
+        <div class="svc-bottom"><span class="svc-price">$270</span><a class="svc-book" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book</a></div>
       </article>
     </div>
   </div>
 
-  <p class="price-note">Prices are market-rate estimates. Final price confirmed when you book.</p>
+  <p class="price-note">Prices from her live booking page. Braiding hair is included. Popular add-ons: Boho $10, Butt length $10, Zig zag part $20, Freestyle design $35, Knotless instead of quick weave $50.</p>
 </section>
 
 <div class="statement">
@@ -619,14 +674,51 @@
     <p>A look at the styles clients keep asking for. Full portfolio lives on Instagram.</p>
   </div>
   <div class="masonry">
-    <div class="tile tall g1"><span>Stitch Braids</span></div>
-    <div class="tile g2"><span>Medium Knotless</span></div>
-    <div class="tile g3"><span>Zigzag Stitch</span></div>
-    <div class="tile wide g4"><span>Stitch X Knotless + Barrel Ends</span></div>
-    <div class="tile g5"><span>Boho Buns</span></div>
-    <div class="tile tall g6"><span>Feed-In Ponytail</span></div>
-    <div class="tile g7"><span>Cornrows with Design</span></div>
-    <div class="tile g8"><span>Small Knotless</span></div>
+    <div class="tile tall"><img src="images/nish-braids-2.jpg" alt="Stitch ponytail with long wavy hair"><span>Stitch Ponytail</span></div>
+    <div class="tile"><img src="images/nish-braids-3.jpg" alt="Freestyle stitch braids with boho curls"><span>Freestyle + Boho</span></div>
+    <div class="tile"><img src="images/nish-braids-4.jpg" alt="Close-up of crisp stitch braids"><span>Crisp Stitch Detail</span></div>
+    <div class="tile wide"><img src="images/nish-braids-7.jpg" alt="Long braids from the back"><span>Waist Length Braids</span></div>
+    <div class="tile"><img src="images/nish-braids-5.jpg" alt="Freestyle stitch braids with boho curls"><span>Freestyle Boho</span></div>
+    <div class="tile tall"><img src="images/nish-braids-8.jpg" alt="Blonde knotless braids"><span>Blonde Knotless</span></div>
+    <div class="tile"><img src="images/nish-braids-6.jpg" alt="Six stitch freestyle braids with curved parts"><span>6 Stitch Freestyle</span></div>
+    <div class="tile"><img src="images/nish-braids-1.jpg" alt="Five wavy stitch braids with a bun"><span>5 Wavy Stitch w/ Bun</span></div>
+  </div>
+</section>
+
+
+<section id="shop" class="shop">
+  <div class="section-head">
+    <h2>Shop <em>Nish</em></h2>
+    <p>The gel behind the sleek finish, plus the tutorial and product list for braiders who want to learn her way.</p>
+  </div>
+  <div class="shop-grid">
+    <figure class="shop-photo">
+      <img src="images/nish-gel.jpg" alt="BraidsbyNish braid gel jar">
+      <figcaption>BraidsbyNish braid gel</figcaption>
+    </figure>
+    <div class="shop-items">
+      <article class="shop-item">
+        <div>
+          <h3>BraidsbyNish Braid Gel</h3>
+          <p>The gel she uses for that sleek, laid finish. Grab a jar with your appointment or order it online.</p>
+        </div>
+        <div class="shop-buy"><span class="shop-price">$25</span><a class="svc-book" href="https://app.acuityscheduling.com/catalog.php?owner=16638227" target="_blank" rel="noopener">Shop</a></div>
+      </article>
+      <article class="shop-item">
+        <div>
+          <h3>Step by Step Stitch Tutorial</h3>
+          <p>Learn her stitch technique start to finish. Made for braiders ready to level up their parts and stitch.</p>
+        </div>
+        <div class="shop-buy"><span class="shop-price">$53</span><a class="svc-book" href="https://app.acuityscheduling.com/catalog.php?owner=16638227" target="_blank" rel="noopener">Shop</a></div>
+      </article>
+      <article class="shop-item">
+        <div>
+          <h3>Product List</h3>
+          <p>Her complete product list. Every product she uses in the chair, in one place.</p>
+        </div>
+        <div class="shop-buy"><span class="shop-price">$10</span><a class="svc-book" href="https://app.acuityscheduling.com/catalog.php?owner=16638227" target="_blank" rel="noopener">Shop</a></div>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -641,7 +733,8 @@
         <li><b>Location</b><span>Detroit, MI</span></li>
         <li><b>Instagram</b><span>@braidsby_nish</span></li>
         <li><b>Specialty</b><span>Stitch braids and knotless</span></li>
-        <li><b>Booking</b><span>DM on Instagram</span></li>
+        <li><b>Booking</b><span>Online, via Acuity</span></li>
+        <li><b>Shop</b><span>Braid gel, stitch tutorial, product list</span></li>
       </ul>
     </div>
   </div>
@@ -649,8 +742,8 @@
 
 <section class="booking">
   <h2>Ready to<br><span class="orange">Get Braided?</span></h2>
-  <p>Spots go fast. Send a DM with your style, your date, and a reference photo, and Nish will confirm your appointment.</p>
-  <a class="btn btn-orange" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book on Instagram</a>
+  <p>Spots go fast. Pick your style, choose your date, and lock it in online. Braiding hair is included.</p>
+  <a class="btn btn-orange" href="https://tanisha.as.me/schedule.php" target="_blank" rel="noopener">Book Appointment</a>
   <br>
   <a class="ig-handle" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">@braidsby_nish &bull; Detroit, MI</a>
 </section>
