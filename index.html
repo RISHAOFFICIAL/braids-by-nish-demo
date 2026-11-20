@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Braids by Nish | Detroit Braider | Stitch Braids, Knotless, Cornrows</title>
+<meta name="description" content="Braids by Nish is a Detroit braider known for clean parts and sharp stitch braids. Stitch braids, knotless, cornrows, buns and ponytails. Book on Instagram @braidsby_nish.">
+<meta property="og:title" content="Braids by Nish | Detroit Braider">
+<meta property="og:description" content="Clean parts. Sharp stitches. Detroit made. Stitch braids, knotless, cornrows, buns and ponytails. Book on Instagram @braidsby_nish.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rishaofficial.github.io/braids-by-nish-demo/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Braids by Nish | Detroit Braider">
+<meta name="twitter:description" content="Clean parts. Sharp stitches. Detroit made. Book on Instagram @braidsby_nish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1E3A2F;
+    --forest-deep: #142A21;
+    --forest-mid: #2C4F3F;
+    --cream: #F7F3EC;
+    --cream-dark: #EFE7D8;
+    --orange: #C85A2E;
+    --orange-deep: #A8461F;
+    --orange-light: #DE7A4C;
+    --ink: #22302A;
+    --muted: #6B7269;
+    --line: rgba(30, 58, 47, 0.14);
+    --white: #FFFFFF;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* ---------- Falling Autumn Leaves ---------- */
+  .falling-leaf {
+    position: fixed;
+    top: -40px;
+    z-index: 90;
+    pointer-events: none;
+    font-size: 20px;
+    opacity: 0.7;
+    animation: leaf-fall linear infinite;
+  }
+
+  @keyframes leaf-fall {
+    0% {
+      transform: translateY(-40px) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.7;
+    }
+    90% {
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .falling-leaf {
+      display: none;
+    }
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(247, 243, 236, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .logo {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: var(--forest);
+    line-height: 1;
+  }
+
+  .logo em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--orange);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    transition: color 0.2s;
+  }
+
+  nav a:hover {
+    color: var(--orange);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 13px 26px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+  }
+
+  .btn-forest {
+    background: var(--forest);
+    color: var(--cream);
+  }
+
+  .btn-forest:hover {
+    background: var(--forest-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(30, 58, 47, 0.25);
+  }
+
+  .btn-orange {
+    background: var(--orange);
+    color: var(--white);
+  }
+
+  .btn-orange:hover {
+    background: var(--orange-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(200, 90, 46, 0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--forest);
+    border: 1.5px solid var(--forest);
+  }
+
+  .btn-outline:hover {
+    background: var(--forest);
+    color: var(--cream);
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--forest);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 150px 24px 0;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .hero-rule {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(56px, 9.5vw, 116px);
+    color: var(--forest);
+    max-width: 980px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--orange);
+  }
+
+  .hero-row {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 48px;
+    align-items: end;
+  }
+
+  .hero-sub {
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 520px;
+  }
+
+  .hero-sub strong {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+
+  .hero-visual {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 12px;
+    height: 400px;
+  }
+
+  .hv-panel {
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 28px;
+  }
+
+  .hv-main {
+    background: linear-gradient(135deg, #2C4F3F 0%, #1E3A2F 55%, #142A21 100%);
+  }
+
+  .hv-main::before {
+    content: '';
+    position: absolute;
+    top: -45%;
+    right: -15%;
+    width: 75%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(200, 90, 46, 0.45) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hv-main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(20, 42, 33, 0.75), transparent);
+  }
+
+  .hv-main-content {
+    position: relative;
+    z-index: 2;
+    color: var(--cream);
+  }
+
+  .hv-main-content h3 {
+    font-size: 34px;
+    line-height: 1.05;
+    font-weight: 600;
+  }
+
+  .hv-main-content p {
+    font-size: 14px;
+    color: rgba(247, 243, 236, 0.75);
+    margin-top: 10px;
+  }
+
+  .hv-side-1 {
+    background: linear-gradient(160deg, #C85A2E 0%, #A8461F 100%);
+  }
+
+  .hv-side-2 {
+    background: linear-gradient(160deg, #7A8B6F 0%, #4E6248 100%);
+  }
+
+  .hv-side span {
+    position: relative;
+    z-index: 2;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--white);
+    line-height: 1.1;
+  }
+
+  .hv-side::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.28), transparent);
+  }
+
+  .photo-note {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--forest);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    z-index: 3;
+  }
+
+  /* ---------- Marquee ---------- */
+  .marquee {
+    margin-top: 64px;
+    background: var(--forest);
+    color: var(--cream);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 16px 0;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    animation: marquee 30s linear infinite;
+  }
+
+  .marquee-track span {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .marquee-track span::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: var(--orange);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ---------- Section base ---------- */
+  section {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 96px 24px;
+  }
+
+  .section-head {
+    margin-bottom: 48px;
+    max-width: 660px;
+    border-top: 1px solid var(--line);
+    padding-top: 32px;
+  }
+
+  .section-head h2 {
+    font-size: clamp(38px, 5vw, 58px);
+    color: var(--forest);
+    margin-bottom: 16px;
+  }
+
+  .section-head p {
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .price-note {
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ---------- Services ---------- */
+  .services {
+    background: var(--white);
+    max-width: none;
+    padding: 96px 0;
+  }
+
+  .services-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .service-cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 48px;
+  }
+
+  .cat-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 11px 22px;
+    border-radius: 100px;
+    border: 1.5px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .cat-btn:hover {
+    border-color: var(--forest);
+  }
+
+  .cat-btn.active {
+    background: var(--forest);
+    color: var(--cream);
+    border-color: var(--forest);
+  }
+
+  .service-group {
+    display: none;
+  }
+
+  .service-group.active {
+    display: block;
+  }
+
+  .service-group-title {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 8px;
+  }
+
+  .service-group-sub {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  .service-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .service-list {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(30, 58, 47, 0.10);
+    border-color: rgba(200, 90, 46, 0.4);
+  }
+
+  .service-card-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px;
+  }
+
+  .service-photo {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--cream);
+  }
+
+  .service-photo-g1 { background: linear-gradient(140deg, #2C4F3F 0%, #142A21 100%); }
+  .service-photo-g2 { background: linear-gradient(140deg, #C85A2E 0%, #A8461F 100%); }
+  .service-photo-g3 { background: linear-gradient(140deg, #7A8B6F 0%, #4E6248 100%); }
+  .service-photo-g4 { background: linear-gradient(140deg, #8C5B3F 0%, #5E3A24 100%); }
+
+  .service-details {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .service-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+
+  .service-time {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .service-card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .service-price {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .service-book-btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    background: var(--forest);
+    padding: 10px 22px;
+    border-radius: 100px;
+    flex-shrink: 0;
+    line-height: 1;
+    transition: background 0.2s ease;
+  }
+
+  .service-card:hover .service-book-btn {
+    background: var(--orange);
+  }
+
+  .service-cta {
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .service-cta p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  /* ---------- Portfolio ---------- */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .portfolio-item {
+    aspect-ratio: 3/4;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+
+  .portfolio-item:hover {
+    transform: scale(1.02);
+  }
+
+  .portfolio-item:nth-child(1) { background: linear-gradient(160deg, #2C4F3F, #142A21); }
+  .portfolio-item:nth-child(2) { background: linear-gradient(160deg, #C85A2E, #A8461F); }
+  .portfolio-item:nth-child(3) { background: linear-gradient(160deg, #7A8B6F, #4E6248); }
+  .portfolio-item:nth-child(4) { background: linear-gradient(160deg, #8C5B3F, #5E3A24); }
+  .portfolio-item:nth-child(5) { background: linear-gradient(160deg, #1E3A2F, #0F1F18); }
+  .portfolio-item:nth-child(6) { background: linear-gradient(160deg, #DE7A4C, #C85A2E); }
+
+  .portfolio-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  }
+
+  .portfolio-label {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+  }
+
+  .portfolio-label strong {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    line-height: 1.2;
+  }
+
+  .portfolio-label span {
+    font-size: 13px;
+    opacity: 0.85;
+  }
+
+  .portfolio-note {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ---------- About ---------- */
+  .about {
+    background: var(--forest);
+    color: var(--cream);
+    max-width: none;
+  }
+
+  .about-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .about-visual {
+    aspect-ratio: 4/5;
+    border-radius: 4px;
+    background: linear-gradient(160deg, #2C4F3F 0%, #1E3A2F 50%, #142A21 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 28px;
+  }
+
+  .about-visual::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -30%;
+    width: 90%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(200, 90, 46, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .about-visual-text {
+    position: relative;
+    z-index: 2;
+  }
+
+  .about-visual-text .big {
+    font-family: 'Fraunces', serif;
+    font-size: 76px;
+    font-weight: 600;
+    line-height: 0.9;
+    color: var(--cream);
+  }
+
+  .about-visual-text p {
+    font-size: 14px;
+    color: rgba(247, 243, 236, 0.7);
+    margin-top: 10px;
+  }
+
+  .about-content h2 {
+    font-size: clamp(36px, 4.5vw, 52px);
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+
+  .about-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(247, 243, 236, 0.85);
+    margin-bottom: 20px;
+  }
+
+  .about-content p strong {
+    color: var(--cream);
+  }
+
+  /* ---------- Booking CTA ---------- */
+  .booking-cta {
+    background: var(--orange);
+    color: var(--white);
+    max-width: none;
+    text-align: center;
+  }
+
+  .booking-cta-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .booking-cta h2 {
+    font-size: clamp(40px, 6vw, 68px);
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .booking-cta p {
+    font-size: 19px;
+    line-height: 1.6;
+    opacity: 0.92;
+    margin-bottom: 32px;
+  }
+
+  .booking-cta .btn {
+    background: var(--white);
+    color: var(--orange-deep);
+    font-size: 17px;
+    padding: 16px 36px;
+  }
+
+  .booking-cta .btn:hover {
+    background: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .booking-note {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  /* ---------- Info bar ---------- */
+  .info-bar {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .info-item h3 {
+    font-size: 19px;
+    color: var(--forest);
+    margin-bottom: 8px;
+  }
+
+  .info-item p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .info-item a {
+    color: var(--orange);
+    font-weight: 700;
+  }
+
+  .info-item a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--forest-deep);
+    color: rgba(247, 243, 236, 0.7);
+    padding: 64px 24px 32px;
+  }
+
+  .footer-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(247, 243, 236, 0.12);
+    margin-bottom: 32px;
+  }
+
+  .footer-brand .logo {
+    color: var(--cream);
+    font-size: 28px;
+  }
+
+  .footer-brand .logo em {
+    color: var(--orange-light);
+  }
+
+  .footer-brand p {
+    margin-top: 12px;
+    font-size: 15px;
+    max-width: 340px;
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 64px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 16px;
+  }
+
+  .footer-col a {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover {
+    color: var(--orange-light);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+  }
+
+  .footer-bottom a {
+    color: var(--orange-light);
+  }
+
+  /* ---------- Mobile ---------- */
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--forest);
+    z-index: 200;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .mobile-nav.open {
+    display: flex;
+  }
+
+  .mobile-nav a {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--cream);
+  }
+
+  .mobile-nav-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: var(--cream);
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: block;
+    }
+
+    .hero {
+      padding-top: 118px;
+    }
+
+    .hero-row {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .hero-actions {
+      justify-content: flex-start;
+    }
+
+    .hero-visual {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    .hero-visual .hv-main {
+      height: 300px;
+    }
+
+    .hv-side {
+      height: 180px;
+    }
+
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .about-visual {
+      aspect-ratio: 16/10;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .service-cats {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-left: -24px;
+      margin-right: -24px;
+      padding-left: 24px;
+      padding-right: 24px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .service-cats::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cat-btn {
+      flex-shrink: 0;
+    }
+
+    .footer-links {
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .portfolio-item {
+      aspect-ratio: 16/10;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">Braids <em>by</em> Nish</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About Nish</a>
+      <a href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.instagram.com/braidsby_nish/" class="btn btn-forest" target="_blank" rel="noopener">Book on Instagram</a>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="toggleMobileNav()" aria-label="Close menu">&#10005;</button>
+  <a href="#services" onclick="toggleMobileNav()">Services</a>
+  <a href="#work" onclick="toggleMobileNav()">Work</a>
+  <a href="#about" onclick="toggleMobileNav()">About Nish</a>
+  <a href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Instagram</a>
+  <a href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener" style="color: var(--orange-light);">Book on Instagram &rarr;</a>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <hr class="hero-rule">
+  <h1>Clean parts. Sharp stitches. <em>Detroit made.</em></h1>
+  <div class="hero-row">
+    <p class="hero-sub">Nish is a Detroit braider known for stitch braids with parts so clean they look drawn on. <strong>71,000 people</strong> follow her work on Instagram. One appointment in her chair and you will see why.</p>
+    <div class="hero-actions">
+      <a href="https://www.instagram.com/braidsby_nish/" class="btn btn-orange" target="_blank" rel="noopener">Book on Instagram &rarr;</a>
+      <a href="#services" class="btn btn-outline">See Services &amp; Prices</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hv-panel hv-main">
+      <span class="photo-note">Your photo here</span>
+      <div class="hv-main-content">
+        <h3>Stitch braids,<br>done with intention.</h3>
+        <p>Every braid laid flat. Every part razor straight.</p>
+      </div>
+    </div>
+    <div class="hv-panel hv-side hv-side-1">
+      <span class="photo-note">Your photo here</span>
+      <span>Stitch X<br>Knotless</span>
+    </div>
+    <div class="hv-panel hv-side hv-side-2">
+      <span class="photo-note">Your photo here</span>
+      <span>Boho<br>Buns</span>
+    </div>
+  </div>
+</div>
+
+<!-- Marquee -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Stitch Braids</span>
+    <span>Knotless</span>
+    <span>Cornrows</span>
+    <span>Boho Buns</span>
+    <span>Feed-In Ponytails</span>
+    <span>Stitch Braids</span>
+    <span>Knotless</span>
+    <span>Cornrows</span>
+    <span>Boho Buns</span>
+    <span>Feed-In Ponytails</span>
+  </div>
+</div>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-head">
+      <h2>Services &amp; Prices</h2>
+      <p>Every style, every price, right here. Pick your look, then book through the link in bio on Instagram.</p>
+      <p class="price-note">Prices are market-rate estimates and times are typical. Your final price is confirmed when you book.</p>
+    </div>
+
+    <div class="service-cats">
+      <button class="cat-btn active" onclick="showCategory('stitch', this)">Stitch Braids</button>
+      <button class="cat-btn" onclick="showCategory('knotless', this)">Knotless</button>
+      <button class="cat-btn" onclick="showCategory('cornrows', this)">Cornrows</button>
+      <button class="cat-btn" onclick="showCategory('buns', this)">Buns &amp; Ponytails</button>
+    </div>
+
+    <!-- Stitch Braids -->
+    <div class="service-group active" id="cat-stitch">
+      <h3 class="service-group-title">Stitch Braids</h3>
+      <p class="service-group-sub">The style Nish is known for. Clean parts, tight stitches, zero bumps.</p>
+      <ul class="service-list">
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g1" aria-hidden="true">6</span><span class="service-details"><span class="service-name">6 Stitch Braids</span><span class="service-time">About 2.5 hrs</span><span class="service-card-foot"><span class="service-price">$105</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g2" aria-hidden="true">8</span><span class="service-details"><span class="service-name">8 Stitch Braids</span><span class="service-time">About 3 hrs</span><span class="service-card-foot"><span class="service-price">$130</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g3" aria-hidden="true">10</span><span class="service-details"><span class="service-name">10 Stitch Braids</span><span class="service-time">About 3.5 hrs</span><span class="service-card-foot"><span class="service-price">$155</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g4" aria-hidden="true">S</span><span class="service-details"><span class="service-name">Stitch X Knotless + Barrel Ends</span><span class="service-time">About 5 hrs</span><span class="service-card-foot"><span class="service-price">$220</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g1" aria-hidden="true">Z</span><span class="service-details"><span class="service-name">Zigzag Stitch Braids</span><span class="service-time">About 3 hrs</span><span class="service-card-foot"><span class="service-price">$140</span><span class="service-book-btn">Book</span></span></span></a></li>
+      </ul>
+    </div>
+
+    <!-- Knotless -->
+    <div class="service-group" id="cat-knotless">
+      <h3 class="service-group-title">Knotless</h3>
+      <p class="service-group-sub">Lightweight, pain-free, and they lay flat from day one.</p>
+      <ul class="service-list">
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g2" aria-hidden="true">M</span><span class="service-details"><span class="service-name">Medium Knotless Box Braids</span><span class="service-time">About 5 hrs</span><span class="service-card-foot"><span class="service-price">$180</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g1" aria-hidden="true">L</span><span class="service-details"><span class="service-name">Large Knotless Box Braids</span><span class="service-time">About 4 hrs</span><span class="service-card-foot"><span class="service-price">$150</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g3" aria-hidden="true">S</span><span class="service-details"><span class="service-name">Small Knotless Box Braids</span><span class="service-time">About 7 hrs</span><span class="service-card-foot"><span class="service-price">$280</span><span class="service-book-btn">Book</span></span></span></a></li>
+      </ul>
+    </div>
+
+    <!-- Cornrows -->
+    <div class="service-group" id="cat-cornrows">
+      <h3 class="service-group-title">Cornrows</h3>
+      <p class="service-group-sub">Straight backs or full designs. Classic work, done clean.</p>
+      <ul class="service-list">
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g3" aria-hidden="true">C</span><span class="service-details"><span class="service-name">Cornrows (straight back)</span><span class="service-time">About 2 hrs</span><span class="service-card-foot"><span class="service-price">$75</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g4" aria-hidden="true">D</span><span class="service-details"><span class="service-name">Cornrows with Design</span><span class="service-time">About 3 hrs</span><span class="service-card-foot"><span class="service-price">$110</span><span class="service-book-btn">Book</span></span></span></a></li>
+      </ul>
+    </div>
+
+    <!-- Buns & Ponytails -->
+    <div class="service-group" id="cat-buns">
+      <h3 class="service-group-title">Buns &amp; Ponytails</h3>
+      <p class="service-group-sub">Updos with structure and style. Sleek, full, and finished.</p>
+      <ul class="service-list">
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g2" aria-hidden="true">B</span><span class="service-details"><span class="service-name">Boho Knotless Buns</span><span class="service-time">About 5 hrs</span><span class="service-card-foot"><span class="service-price">$200</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener"><span class="service-photo service-photo-g1" aria-hidden="true">F</span><span class="service-details"><span class="service-name">Feed-In Ponytail</span><span class="service-time">About 3 hrs</span><span class="service-card-foot"><span class="service-price">$120</span><span class="service-book-btn">Book</span></span></span></a></li>
+      </ul>
+    </div>
+
+    <div class="service-cta">
+      <p>Do not see the style you want? DM Nish on Instagram and she will make it happen.</p>
+      <a href="https://www.instagram.com/braidsby_nish/" class="btn btn-forest" target="_blank" rel="noopener">Book on Instagram &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section id="work">
+  <div class="section-head">
+    <h2>The Work Speaks</h2>
+    <p>Every head that leaves this chair is a walking advertisement. Here is a taste of what Nish does.</p>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <span class="photo-note">Your photo here</span>
+      <div class="portfolio-label"><strong>8 Stitch Braids</strong><span>Clean parts &middot; $130</span></div>
+    </div>
+    <div class="portfolio-item">
+      <span class="photo-note">Your photo here</span>
+      <div class="portfolio-label"><strong>Medium Knotless</strong><span>Waist length &middot; $180</span></div>
+    </div>
+    <div class="portfolio-item">
+      <span class="photo-note">Your photo here</span>
+      <div class="portfolio-label"><strong>Stitch X Knotless</strong><span>Barrel ends &middot; $220</span></div>
+    </div>
+    <div class="portfolio-item">
+      <span class="photo-note">Your photo here</span>
+      <div class="portfolio-label"><strong>Zigzag Stitch Braids</strong><span>Statement parts &middot; $140</span></div>
+    </div>
+    <div class="portfolio-item">
+      <span class="photo-note">Your photo here</span>
+      <div class="portfolio-label"><strong>Boho Knotless Buns</strong><span>With curls &middot; $200</span></div>
+    </div>
+    <div class="portfolio-item">
+      <span class="photo-note">Your photo here</span>
+      <div class="portfolio-label"><strong>Feed-In Ponytail</strong><span>Sleek finish &middot; $120</span></div>
+    </div>
+  </div>
+
+  <p class="portfolio-note">Portfolio photos are placeholders. The final site will feature Nish's real work from Instagram.</p>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-visual">
+      <span class="photo-note">Your photo here</span>
+      <div class="about-visual-text">
+        <div class="big">Nish</div>
+        <p>Detroit, Michigan</p>
+      </div>
+    </div>
+    <div class="about-content">
+      <h2>Meet the hands behind the braids.</h2>
+      <p>Nish started braiding because she loved the way a fresh set of braids could change how a woman walks into a room. That feeling never got old, so she turned it into Braids by Nish.</p>
+      <p>Now she is one of Detroit's most followed braiders, with <strong>71,000 followers</strong> on Instagram watching every style she drops. Her stitch braids built the following: parts so clean they look drawn on, stitches so tight the braids lay flat for weeks.</p>
+      <p>Every style is done with care for your edges, your scalp, and your time. No rushing, no cutting corners. Just beautiful work, every single time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Booking CTA -->
+<section class="booking-cta">
+  <div class="booking-cta-inner">
+    <h2>Your next hairstyle is one tap away.</h2>
+    <p>Booking happens on Instagram. Tap the link in bio at @braidsby_nish to grab your spot before it fills up.</p>
+    <a href="https://www.instagram.com/braidsby_nish/" class="btn" target="_blank" rel="noopener">Book on Instagram &rarr;</a>
+    <p class="booking-note">Follow @braidsby_nish for openings, new styles, and same day availability.</p>
+  </div>
+</section>
+
+<!-- Info bar -->
+<div class="info-bar">
+  <div class="info-item">
+    <h3>Location</h3>
+    <p>Detroit, Michigan<br>Exact address provided upon booking confirmation.</p>
+  </div>
+  <div class="info-item">
+    <h3>Follow Nish</h3>
+    <p>See the latest styles, openings, and deals on Instagram.<br><a href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">@braidsby_nish &rarr;</a></p>
+  </div>
+  <div class="info-item">
+    <h3>Questions?</h3>
+    <p>DM Nish on Instagram for custom styles, consultations, or anything not listed here.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">Braids <em>by</em> Nish</a>
+        <p>Detroit braider known for clean parts and sharp stitch braids. Knotless, cornrows, buns, and ponytails, done right.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#services">Stitch Braids</a>
+          <a href="#services">Knotless</a>
+          <a href="#services">Cornrows</a>
+          <a href="#services">Buns &amp; Ponytails</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.instagram.com/braidsby_nish/" target="_blank" rel="noopener">Book on Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Braids by Nish &middot; Detroit, MI</span>
+      <span>Demo site built by <a href="https://rishaofficial.github.io/lexis-sapphire-studio/" target="_blank" rel="noopener">Lexis Sapphire Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function showCategory(catId, btn) {
+    // Hide all groups
+    document.querySelectorAll('.service-group').forEach(g => g.classList.remove('active'));
+    // Remove active from all buttons
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    // Show selected group
+    document.getElementById('cat-' + catId).classList.add('active');
+    // Mark button active
+    btn.classList.add('active');
+  }
+
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // Falling autumn leaves
+  (function() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+    var leaves = ['\uD83C\uDF42', '\uD83C\uDF41', '\uD83C\uDF43'];
+    var isMobile = window.innerWidth < 768;
+    var count = isMobile ? 7 : 12;
+    var minDuration = isMobile ? 13 : 9;
+    var maxDuration = isMobile ? 21 : 17;
+
+    for (var i = 0; i < count; i++) {
+      var leaf = document.createElement('span');
+      leaf.className = 'falling-leaf';
+      leaf.textContent = leaves[Math.floor(Math.random() * leaves.length)];
+      leaf.style.left = Math.random() * 100 + 'vw';
+      leaf.style.fontSize = (16 + Math.random() * 12) + 'px';
+      leaf.style.animationDuration = (minDuration + Math.random() * (maxDuration - minDuration)) + 's';
+      leaf.style.animationDelay = (-Math.random() * 14) + 's';
+      document.body.appendChild(leaf);
+    }
+  })();
+</script>
+
+</body>
+</html>
